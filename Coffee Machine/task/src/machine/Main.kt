@@ -87,13 +87,28 @@ fun buy() {
             dispCups -= 1
             if (waterIn < 0){
                 println("Sorry, not enough water!")
+                moneyIn -= 4
                 waterIn += 250
+                coffeeIn += 16
+                dispCups += 1
                 println("")
                 actionMenu()
             }
-            if (waterIn < 0){
+            if (milkIn < 0){
                 println("Sorry, not enough milk!")
-                milkIn += 250
+                moneyIn -= 4
+                waterIn += 250
+                coffeeIn += 16
+                dispCups += 1
+                println("")
+                actionMenu()
+            }
+            if (dispCups < 0) {
+                println("Sorry, not enough disposable cups!")
+                moneyIn -= 4
+                waterIn += 250
+                coffeeIn += 16
+                dispCups += 1
                 println("")
                 actionMenu()
             }
@@ -106,19 +121,41 @@ fun buy() {
             dispCups -= 1
             if (waterIn < 0){
                 println("Sorry, not enough water!")
+                moneyIn -= 7
                 waterIn += 350
-                println("")
-                actionMenu()
-            }
-            if (waterIn < 0){
-                println("Sorry, not enough milk!")
                 milkIn += 75
+                coffeeIn += 20
+                dispCups += 1
                 println("")
                 actionMenu()
             }
-            if (waterIn < 0){
-                println("Sorry, not enough coffee beans!")
+            if (milkIn < 0){
+                println("Sorry, not enough milk!")
+                moneyIn -= 7
+                waterIn += 350
+                milkIn += 75
                 coffeeIn += 20
+                dispCups += 1
+                println("")
+                actionMenu()
+            }
+            if (coffeeIn < 0){
+                println("Sorry, not enough coffee beans!")
+                moneyIn -= 7
+                waterIn += 350
+                milkIn += 75
+                coffeeIn += 20
+                dispCups += 1
+                println("")
+                actionMenu()
+            }
+            if (dispCups < 0) {
+                println("Sorry, not enough disposable cups!")
+                moneyIn -= 7
+                waterIn += 350
+                milkIn += 75
+                coffeeIn += 20
+                dispCups += 1
                 println("")
                 actionMenu()
             }
@@ -141,19 +178,32 @@ fun buy() {
             }
             if (milkIn < 0){
                 println("Sorry, not enough milk!")
+                moneyIn -= 6
+                waterIn += 200
                 milkIn += 100
+                coffeeIn += 12
+                dispCups += 1
                 println("")
                 actionMenu()
 
             }
             if (coffeeIn < 0){
                 println("Sorry, not enough coffee beans!")
+                moneyIn -= 6
+                waterIn += 200
+                milkIn += 100
                 coffeeIn += 12
+                dispCups += 1
                 println("")
                 actionMenu()
             }
             if (dispCups < 0) {
                 println("Sorry, not enough disposable cups!")
+                moneyIn -= 6
+                waterIn += 200
+                milkIn += 100
+                coffeeIn += 12
+                dispCups += 1
                 println("")
                 actionMenu()
             }
